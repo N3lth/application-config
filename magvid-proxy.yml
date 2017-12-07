@@ -14,6 +14,14 @@ zuul:
     book-service:
       path: /book-service/**
       sensitive-headers: Set-Cookie,Authorization
+    rating-service:
+      path: /rating-service/**
+      sensitive-headers: Set-Cookie,Authorization
+    magvid-discovery:
+      path: /magvid-discovery/**
+      sensitive-headers: Set-Cookie,Authorization
+      url: http://localhost:8082
+
 hystrix:
   command:
     book-service:
@@ -21,28 +29,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 600000
-
-zuul:
-  routes:
-    rating-service:
-      path: /rating-service/**
-      sensitive-headers: Set-Cookie,Authorization
-hystrix:
-  command:
     rating-service:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 600000
-
-zuul:
-  routes:
-    magvid-discovery:
-      path: /magvid-discovery/**
-      sensitive-headers: Set-Cookie,Authorization
-      url: http://localhost:8082
-hystrix:
-  command:
     magvid-discovery:
       execution:
         isolation:
