@@ -1,0 +1,13 @@
+# konfiguracja aplikacji magvid-authentication-service pobierana zdalnie przez serwer konfiguracyjny
+server:
+  port: 8083
+spring:
+  application:
+    name: magvid-authentication-service
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/

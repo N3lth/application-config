@@ -24,12 +24,12 @@ zuul:
 
 hystrix:
   command:
-    book-service:
+    magvid-authentication-service:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 600000
-    rating-service:
+    magvid-search-service:
       execution:
         isolation:
           thread:
