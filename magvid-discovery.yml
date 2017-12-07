@@ -1,3 +1,4 @@
+# konfiguracja aplikacji magvid-discovery pobierana zdalnie przez serwer konfiguracyjny
 server:
   port: 8082
 spring:
