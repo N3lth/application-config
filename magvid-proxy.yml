@@ -12,10 +12,10 @@ eureka:
 zuul:
   routes:
     book-service:
-      path: /book-service/**
+      path: /magvid-authentication-service/**
       sensitive-headers: Set-Cookie,Authorization
     rating-service:
-      path: /rating-service/**
+      path: /magvid-search-service/**
       sensitive-headers: Set-Cookie,Authorization
     magvid-discovery:
       path: /magvid-discovery/**
@@ -28,14 +28,14 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 600000
+            timeoutInMilliseconds: 300000
     magvid-search-service:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 600000
+            timeoutInMilliseconds: 300000
     magvid-discovery:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 600000
+            timeoutInMilliseconds: 300000

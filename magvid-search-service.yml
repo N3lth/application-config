@@ -1,0 +1,13 @@
+# konfiguracja aplikacji magvid-search-service pobierana zdalnie przez serwer konfiguracyjny
+server:
+  port: 8084
+spring:
+  application:
+    name: magvid-search-service
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
