@@ -11,19 +11,27 @@ eureka:
 
 zuul:
   routes:
-    book-service:
-      path: /magvid-authentication-service/**
-      sensitive-headers: Set-Cookie,Authorization
-    rating-service:
-      path: /magvid-search-service/**
-      sensitive-headers: Set-Cookie,Authorization
     magvid-discovery:
       path: /magvid-discovery/**
       sensitive-headers: Set-Cookie,Authorization
       url: http://localhost:8082
+    magvid-authentication-service:
+      path: /magvid-authentication-service/**
+      sensitive-headers: Set-Cookie,Authorization
+    magvid-search-service:
+      path: /magvid-search-service/**
+      sensitive-headers: Set-Cookie,Authorization
+    magvid-streaming-service:
+      path: /magvid-streaming-service/**
+      sensitive-headers: Set-Cookie,Authorization
 
 hystrix:
   command:
+    magvid-discovery:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
     magvid-authentication-service:
       execution:
         isolation:
@@ -34,7 +42,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 300000
-    magvid-discovery:
+    magvid-streaming-service:
       execution:
         isolation:
           thread:

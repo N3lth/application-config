@@ -1,9 +1,9 @@
-# konfiguracja aplikacji magvid-search-service pobierana zdalnie przez serwer konfiguracyjny
+# konfiguracja aplikacji magvid-streaming-service pobierana zdalnie przez serwer konfiguracyjny
 server:
-  port: 8084
+  port: 8085
 spring:
   application:
-    name: magvid-search-service
+    name: magvid-streaming-service
   redis:
     host: localhost
     port: 6379
