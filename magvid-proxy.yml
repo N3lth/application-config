@@ -9,6 +9,10 @@ eureka:
     region: default
     registryFetchIntervalSeconds: 5
 
+management:
+  security:
+    sessions: always
+
 zuul:
   routes:
     magvid-discovery:
@@ -23,6 +27,12 @@ zuul:
       sensitive-headers: Set-Cookie,Authorization
     magvid-streaming-service:
       path: /magvid-streaming-service/**
+      sensitive-headers: Set-Cookie,Authorization
+    magvid-content-management-service:
+      path: /magvid-content-management-service/**
+      sensitive-headers: Set-Cookie,Authorization
+    magvid-administration-service:
+      path: /magvid-administration-service/**
       sensitive-headers: Set-Cookie,Authorization
 
 hystrix:
@@ -43,6 +53,16 @@ hystrix:
           thread:
             timeoutInMilliseconds: 300000
     magvid-streaming-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    magvid-content-management-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    magvid-administration-service:
       execution:
         isolation:
           thread:
