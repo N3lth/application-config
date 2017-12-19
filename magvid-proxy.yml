@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: magvid-proxy
+  redis:
+    host: localhost
+    port: 6379
 eureka:
   client:
     region: default
