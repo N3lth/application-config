@@ -9,6 +9,6 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://discUser:discPassword@localhost:8082/eureka/
+      defaultZone: http://magvid_discovery:magvid_discovery@localhost:8082/eureka/
   register-with-eureka: false
   fetch-registry: false
