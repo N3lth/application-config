@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: magvid-discovery
+  session:
+    store-type: Redis
 eureka:
   instance:
     hostname: localhost
