@@ -1,6 +1,8 @@
 # konfiguracja aplikacji magvid-proxy pobierana zdalnie przez serwer konfiguracyjny
 server:
   port: 8080
+  session:
+    timeout: 15
 spring:
   application:
     name: magvid-proxy
