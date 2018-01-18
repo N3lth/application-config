@@ -1,9 +1,9 @@
 # konfiguracja aplikacji magvid-authentication-service pobierana zdalnie przez serwer konfiguracyjny
 server:
-  port: 8083
+  port: 8087
 spring:
   application:
-    name: magvid-authentication-service
+    name: magvid-streaming-service
   redis:
     host: localhost
     port: 6379
