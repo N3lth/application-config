@@ -18,6 +18,10 @@ management:
   security:
     sessions: always
 
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
 zuul:
   routes:
     magvid-discovery:
